@@ -1,0 +1,106 @@
+.Tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: aliceblue;
+  border: 2px solid;
+  width: 180px;
+  height: fit-content;
+  min-height: 367px;
+  border-radius: 10px;
+}
+
+.Tile > img {
+  height: 200px;
+  width: 150px;
+  border-radius: 10px;
+  border: 5px solid;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* margin: 2px; */
+  text-align: center;
+  /* background-color: antiquewhite; */
+}
+.genres > span {
+  font-size: 14px;
+  border: 1px solid;
+  padding: 4px;
+  margin: 2px;
+  background-color: rgb(213, 210, 210);
+  border-radius: 10px;
+}
+
+.showButton {
+  margin-top: 5px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(255, 170, 86);
+  border: 2px solid rgb(235, 126, 16);
+  width: 70px;
+}
+.showButton:hover {
+  opacity: 80%;
+}
+.showButton:active {
+  box-shadow: inset 2px 2px 2px 0.5px rgb(235, 126, 16);
+}
+
+@media screen and (max-width: 850px) {
+  .Tile {
+    width: 150px;
+    gap: 5px;
+    min-height: 300px;
+  }
+  .Tile > img {
+    height: 150px;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Tile {
+    width: 100px;
+    gap: 5px;
+    min-height: 100px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .Tile > img {
+    height: 100px;
+    width: 80px;
+  }
+
+  .rating {
+    display: none;
+    /* font-size: 12px;
+    gap: 2px; */
+  }
+
+  .genres > span {
+    display: none;
+    /* padding: 0px;
+    font-size: 10px;
+    border: none;
+    background-color: unset; */
+  }
+
+  .showButton {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px;
+  }
+}

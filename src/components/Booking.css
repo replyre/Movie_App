@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.model-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(189, 189, 189, 0.9);
+}
+
+.model-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aliceblue;
+  position: fixed;
+  right: 35%;
+  min-width: 30rem;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.movieInfo {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.movieInfo > img {
+  height: 150px;
+  border: 2px solid;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  justify-content: space-evenly;
+  padding: 2px;
+}
+
+.form {
+  width: 60%;
+  padding: 10px;
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+
+.form > label {
+  width: 100%;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.form > label > input {
+  text-align: center;
+  padding: 2px;
+  border-radius: 5px;
+  border: 2px solid;
+  outline: none;
+}
+
+.Tickets {
+  display: flex;
+  gap: 5px;
+}
+
+.ticket_no {
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.ticket:focus {
+  border: 2px solid;
+}
+.ticket_no:hover {
+  background-color: rgb(207, 207, 207, 0.4);
+}
+.ticket_no:active {
+  background-color: red;
+  color: white;
+}
+
+.buttons {
+  margin-top: 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+.buttons > button {
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.buttons > button:hover {
+  opacity: 70%;
+}
+
+.buttons > button:active {
+  font-size: 23px;
+}
+
+@media screen and (max-width: 850px) {
+  .model-container {
+    right: 17%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .model-container {
+    min-width: 20rem;
+    bottom: 20%;
+    left: 10%;
+    font-size: 12px;
+  }
+  .form {
+    width: 90%;
+    align-items: center;
+  }
+  .form > label > input {
+    text-align: center;
+    padding: 2px;
+    border-radius: 5px;
+    border: 2px solid;
+    outline: none;
+    font-size: 12px;
+  }
+  .form > label {
+    align-items: center;
+  }
+}

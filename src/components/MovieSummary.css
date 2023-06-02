@@ -1,0 +1,151 @@
+.Summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  margin: 2%;
+  border: 2px solid;
+  border-radius: 10px;
+}
+
+.Title {
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.Rating {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.summary-container {
+  margin: 20px 0px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.summary-container > img {
+  height: 250px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 2px;
+  border: 3px solid;
+}
+
+.material {
+  font-size: 20px;
+}
+
+.readMore {
+  background-color: rgb(130, 220, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid rgb(85, 149, 233);
+  cursor: pointer;
+}
+
+.bookTickets {
+  background-color: rgb(51, 220, 51);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid green;
+  cursor: pointer;
+}
+
+p {
+  font-size: 20px;
+}
+
+.bookTickets:active {
+  font-size: 18px;
+  box-shadow: inset 0px 0px 0.5px 2px rgb(48, 242, 48);
+}
+
+.readMore:active {
+  font-size: 18px;
+  box-shadow: inset 0px 0px 0.5px 2px rgb(48, 203, 242);
+}
+
+@media screen and (max-width: 850px) {
+  .material {
+    transform: scale(0.9);
+  }
+
+  .summary-container {
+    flex-direction: column;
+    margin: 0px;
+    gap: 2px;
+  }
+
+  .Summary {
+    max-height: 100%;
+    margin: 50px 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Summary {
+    position: relative;
+    bottom: 150px;
+    max-height: 400px;
+  }
+  .Title {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .summary-container > img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .summary-container > div > h2 {
+    font-size: 15px;
+  }
+  .summary-container {
+    padding-top: 5px;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .hid {
+    display: none;
+  }
+
+  .summaryButtons {
+    display: flex;
+  }
+  .readMore {
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+  .bookTickets {
+    margin: 10px;
+    padding: 5px;
+    width: 100px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+}
