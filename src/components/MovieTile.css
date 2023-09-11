@@ -2,27 +2,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0px;
-  padding: 10px;
-  background-color: aliceblue;
-  border: 2px solid;
-  width: 180px;
+  margin: 5px 0px;
+  /* padding: 10px; */
+  gap: 5px;
+  background-image: linear-gradient(to bottom right, magenta, #28282b, magenta);
+  border: 2px solid linear-gradient(to bottom right, magenta, #28282b, magenta);
+  width: 200px;
   height: fit-content;
-  min-height: 367px;
+  min-height: fit-content;
+  padding-bottom: 20px;
   border-radius: 10px;
+  color: whitesmoke;
 }
 
 .Tile > img {
   height: 200px;
-  width: 150px;
+  width: 100%;
   border-radius: 10px;
-  border: 5px solid;
+  /* border: 1px solid black; */
 }
 
 .rating {
   display: flex;
   align-items: center;
   gap: 5px;
+  color: lightsalmon;
+  font-size: 15px;
 }
 
 .genres {
@@ -35,6 +40,7 @@
 }
 .genres > span {
   font-size: 14px;
+  color: black;
   border: 1px solid;
   padding: 4px;
   margin: 2px;
@@ -60,13 +66,13 @@
 
 @media screen and (max-width: 850px) {
   .Tile {
-    width: 150px;
+    width: 200px;
     gap: 5px;
     min-height: 300px;
   }
   .Tile > img {
     height: 150px;
-    width: 120px;
+    width: 100%;
   }
 }
 
@@ -81,7 +87,7 @@
 
   .Tile > img {
     height: 100px;
-    width: 80px;
+    width: 100%;
   }
 
   .rating {

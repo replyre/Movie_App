@@ -77,7 +77,11 @@ const Booking = ({ setCheckBooking, movieData }) => {
         <h1>Book Tickets</h1>
         <div className="movieInfo">
           <img
-            src={movieData.image ? movieData.image.medium : movieData.title}
+            src={
+              movieData.image
+                ? movieData.image.medium
+                : "https://www.pngitem.com/pimgs/m/346-3466346_clipart-of-movie-films-and-cinema-film-reel.png"
+            }
           />
 
           <div className="details">

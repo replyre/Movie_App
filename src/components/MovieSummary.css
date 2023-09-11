@@ -3,14 +3,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2%;
-  margin: 2%;
+  padding: 5px 2%;
+  margin: 10px 2%;
+  margin-top: 100px;
   border: 2px solid;
   border-radius: 10px;
+  background-image: linear-gradient(to bottom left, #fff, #28282b);
+  color: rgb(66, 4, 66);
+  text-shadow: 0px 0px 16px #fff;
+  padding-bottom: 20px;
 }
 
+.Close-Button {
+  align-self: flex-end;
+  font-size: 20px;
+  font-family: "Lucida Sans";
+  padding: 5px 11px;
+  border-radius: 50%;
+}
+.Close-Button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.Close-Button:active {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
 .Title {
-  font-size: 50px;
+  font-size: 42px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -21,19 +42,39 @@
 }
 
 .summary-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: scroll;
   margin: 20px 0px;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 2px 10px 2px 0px;
+  text-shadow: none;
+  color: black;
 }
 
 .summary-container > img {
-  height: 250px;
+  height: 260px;
   width: 200px;
   border-radius: 10px;
   padding: 2px;
   border: 3px solid;
+}
+
+.genres_summary > span {
+  font-size: 17px;
+  /* text-shadow: 2px 2px 3px black; */
+  border-radius: 20px;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+.summaryButtons {
+  display: flex;
 }
 
 .material {
@@ -41,8 +82,10 @@
 }
 
 .readMore {
-  background-color: rgb(130, 220, 255);
+  background-color: rgb(255, 103, 255);
   display: flex;
+  color: #fff;
+  box-shadow: 0px 2px 12px 2px black;
   align-items: center;
   justify-content: space-around;
   margin: 20px;
@@ -50,12 +93,14 @@
   width: 200px;
   font-size: 20px;
   border-radius: 15px;
-  border: 2px solid rgb(85, 149, 233);
+  border: 2px solid black;
   cursor: pointer;
 }
 
 .bookTickets {
-  background-color: rgb(51, 220, 51);
+  background-color: rgb(247, 25, 25);
+  color: #fff;
+  box-shadow: 0px 2px 12px 2px black;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -64,7 +109,7 @@
   width: 200px;
   font-size: 20px;
   border-radius: 15px;
-  border: 2px solid green;
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -79,23 +124,27 @@ p {
 
 .readMore:active {
   font-size: 18px;
-  box-shadow: inset 0px 0px 0.5px 2px rgb(48, 203, 242);
+  box-shadow: inset 0px 0px 5px 2px black;
 }
 
 @media screen and (max-width: 850px) {
-  .material {
-    transform: scale(0.9);
+  .Summary {
+    text-align: center;
   }
-
   .summary-container {
     flex-direction: column;
-    margin: 0px;
-    gap: 2px;
+    max-height: 300px;
+    padding: 0px;
+    overflow: hidden;
   }
 
-  .Summary {
-    max-height: 100%;
-    margin: 50px 10px;
+  .summary-container > img {
+    border-radius: 20px;
+    height: 300px;
+    width: 400px;
+  }
+  .summary-container > div > div {
+    display: none;
   }
 }
 
@@ -104,26 +153,37 @@ p {
     position: relative;
     bottom: 150px;
     max-height: 400px;
+    font-size: 12px;
   }
   .Title {
     font-size: 30px;
   }
-
-  p {
+  .genres_summary > span {
     font-size: 12px;
   }
+  p {
+    font-size: 11px;
+  }
+  .summary-container > div > div {
+    display: block;
+    overflow: scroll;
+  }
 
+  .summary-container {
+    padding: 10px;
+    flex-direction: column;
+    overflow: scroll;
+    max-height: 500px;
+  }
   .summary-container > img {
     height: 100px;
-    width: 100px;
+    width: 150px;
   }
 
   .summary-container > div > h2 {
     font-size: 15px;
   }
   .summary-container {
-    padding-top: 5px;
-    flex-direction: row;
     text-align: center;
   }
 
@@ -131,9 +191,6 @@ p {
     display: none;
   }
 
-  .summaryButtons {
-    display: flex;
-  }
   .readMore {
     margin: 10px;
     padding: 5px;

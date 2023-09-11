@@ -3,7 +3,7 @@ import "./MovieContainer.css";
 import { Gear, Search } from "react-bootstrap-icons";
 import MovieTile from "./MovieTile";
 
-const MovieContainer = ({ setData }) => {
+const MovieContainer = ({ setData, setToggle }) => {
   const [moviesData, setMoviesData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -27,21 +27,35 @@ const MovieContainer = ({ setData }) => {
   }, []);
   return (
     <div className="Container">
-      <h1 className="headline">
-        <span>Movies</span> &#128253;
-      </h1>
       <div className="searchBar">
-        <input
-          placeholder="Enter keyword"
-          className="search-input"
-          onChange={(e) => {
-            setQuery(e.target.value);
-          }}
-        />
-        <button className="search-button" onClick={() => getMovies()}>
-          <Search />
-        </button>
+        <h1 className="headline">
+          <span>Movies</span>{" "}
+          <span style={{ fontSize: "50px", paddingBottom: "10px" }}>
+            &#128253;
+          </span>
+        </h1>
+        <span class="searchBar2">
+          <input
+            placeholder="Enter keyword"
+            className="search-input"
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+          />
+          <button className="search-button" onClick={() => getMovies()}>
+            <Search />
+          </button>
+        </span>
       </div>
+      <h1
+        style={{
+          fontFamily: "fantasy",
+          marginTop: "100px",
+          textAlign: "center",
+        }}
+      >
+        Search and Book favourite movie
+      </h1>
       <div className="Tile-Container">
         {loading && <Gear className="loading" />}
         {error && <h1>Error loading the page...</h1>}
@@ -51,6 +65,7 @@ const MovieContainer = ({ setData }) => {
               key={movie.show.id}
               movie={movie.show}
               setData={setData}
+              setToggle={setToggle}
             />
           );
         })}

@@ -1,52 +1,77 @@
 .Container {
-  background-color: antiquewhite;
+  background-image: linear-gradient(to bottom right, #28282b, #fff, #28282b);
   max-height: 120vh;
   overflow: scroll;
 }
 
 .headline {
+  text-shadow: 2px 1px 6px rgb(228, 151, 228);
   display: flex;
   align-items: center;
-  font-size: 40px;
+  font-size: 35px;
   gap: 5px;
   justify-content: center;
 }
 
 .searchBar {
+  width: 100%;
+  background-image: linear-gradient(to bottom left, #28282b, magenta);
+  position: fixed;
+  top: 0;
+
+  /* padding: 10px 0px; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 5px;
+  box-shadow: 0px 2px 5px 0.5px rgb(0, 0, 0, 0.7);
 }
 
+.searchBar2 {
+  text-align: "end";
+  width: "50%";
+}
 .search-input {
-  font-size: 15px;
+  width: 70%;
+  font-size: 22px;
   border-radius: 5px;
   outline: none;
-  padding: 5px;
-  border: 2px solid;
+  padding: 6px;
+  padding-left: 15px;
+  margin-right: 5px;
+  background-color: rgb(250, 121, 250);
+
+  box-shadow: 0px 2px 5px 0.5px rgb(0, 0, 0, 0.7);
+}
+
+.search-input:focus {
+  border: 1px solid black;
+}
+.search-input::placeholder {
+  color: black;
 }
 
 .search-button {
   padding: 5px;
-  font-size: 15px;
+  font-size: 22px;
   width: 50px;
   outline: 0;
-  background-color: #0ba6ff;
+  background-color: rgb(244, 86, 244);
   cursor: pointer;
   border: none;
   color: white;
   border-radius: 5px;
   border: 2px solid black;
+  box-shadow: 0px 2px 5px 0.5px rgb(0, 0, 0, 0.7);
 }
 
 .search-button:hover {
-  background: #1199e8;
+  background: rgb(212, 8, 212);
 }
 
 .search-button:active {
-  font-size: 14px;
-  box-shadow: inset 2px 2px 5px 0.5px #0995e6;
+  transform: scale(0.9);
+  box-shadow: 2px 2px 5px 0.5px rgb(0, 0, 0, 0.7);
 }
 
 .Tile-Container {
@@ -80,7 +105,7 @@
 }
 @media screen and (max-width: 850px) {
   .Container {
-    background-color: #0995e6;
+    background-image: linear-gradient(to bottom right, #28282b, #fff);
   }
 
   .Tile-Container {
@@ -92,13 +117,22 @@
 
 @media screen and (max-width: 450px) {
   .Container {
-    background-color: antiquewhite;
+    background-image: linear-gradient(to bottom right, #28282b, #fff);
     max-height: fit-content;
   }
 
   .Tile-Container {
-    margin: 5px auto;
+    margin: 50px auto;
     gap: 10px;
     max-width: 90%;
+  }
+  .searchBar {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .searchBar2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }

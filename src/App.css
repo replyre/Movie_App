@@ -8,8 +8,8 @@
   width: 100vw;
   height: 120vh;
   display: flex;
-  background-color: rgb(255, 223, 182);
-  align-items: center;
+  background-image: linear-gradient(to top left, #fff, #28282b, #fff);
+  /* align-items: center; */
 }
 
 .Container {
@@ -21,20 +21,19 @@
 }
 .Summary {
   flex: 1;
-  /* min-height: 100%; */
   background: white;
   height: fit-content;
 }
 
 @media screen and (max-width: 850px) {
   .App {
-    background-color: rgb(100, 156, 236);
+    /* background-image: linear-gradient(to bottom right, #28282b, #fff); */
   }
 }
 
 @media screen and (max-width: 450px) {
   .App {
-    background-color: antiquewhite;
+    /* background-image: linear-gradient(to bottom right, #28282b, #fff); */
     flex-direction: column;
   }
 
